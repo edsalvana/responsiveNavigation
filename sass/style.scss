@@ -69,9 +69,9 @@ $borderColor: rgba(26,33,39,.1);
 }
 
 /* FONTS ------------------------------------------------------- */
-$fontList:  (( FreightSansProLight,   "../fonts/FreigSanProMed.otf"          ),
+$fontList:  (( FreightSansProLight,   "../fonts/FreigSanProLig.otf"          ),
              ( FreightSansProBook,    "../fonts/FreigSanProBook.otf"     ),
-             ( FreightSansProMediun,  "../fonts/FreigSanProMed.otf"  ));
+             ( FreightSansProMedium,  "../fonts/FreigSanProMed.otf"  ));
 
 @include addFontFace( $fontList );
 
@@ -98,7 +98,7 @@ p {
 }
 
 h1 {
-      font-family:      'FreightSansProMediun';
+      font-family:      'FreightSansProMedium';
       font-size: 2em;
 }
 
@@ -186,27 +186,42 @@ h2 {
                   overflow:hidden;
             }
 
+            h2{   
+                  font-family: 'FreightSansProBook';
+                  font-size:              1.25em;
+                  color: #FFFFFF;
+
+            }
+
+            aside {
+                  font-family: 'FreightSansProLight';
+                  font-size:              .875em;
+                  letter-spacing:.1em;
+                  color: #f0c1a9;  
+        
+            }
+
             ul {
                   margin-top:       0px;
                   margin-left:      0px;
                   //margin-left:      2.08333333333%; // (  20 / 960 ) * 100 
-                  outline: 1px solid red;
-                  display:inline;
+                  //outline: 1px solid red;
+                  float:left;
               
                   li {  
 
               
-                       outline:           1px solid blue;
-                        
-                       padding:10px;
+                       //outline:           1px solid blue;
+                        display:inline;
+                  
 
                         ul{
-                            
+                              float:left;
                               width:300px;
 
                               li{
-
-                                          outline: 1px dotted green;
+                                    display:block;
+                                    //outline: 1px dotted green;
                               }
                        }
 
