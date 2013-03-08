@@ -1,0 +1,539 @@
+// VARS ------------------------------------------------------- */
+
+$linkColor:salmon;
+$darkBlue: #1a2127;
+$borderColor: rgba(26,33,39,.1);
+
+// RESET ------------------------------------------------------- */
+@import "compass/reset";
+
+// MIXINS ------------------------------------------------------- */
+
+
+// Creates a grid given the following params
+//
+// $p_gridList:    a list of class names to name the generated columns
+// $p_gridList:    a width of the total grid including the left and right margins
+// $p_columnWidth: width of a column
+// $p_gutterWidth: width of a gutter
+
+@mixin creatGrid($p_gridWidth:960px, $p_columnWidth:60px, $p_gutterWidth:20px, $p_gridList:null, $p_outline:false ){
+     
+     //if no grid list is supplied, we default to a 12 column grid
+     @if $p_gridList == null { 
+          $p_gridList:(one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve);
+     }
+
+     @for $i from 1 through length($p_gridList) {
+            .#{ nth( $p_gridList, $i ) }{
+                  width:  (( $i * $p_columnWidth + ( ($i - 1) * $p_gutterWidth ) ) / $p_gridWidth)*100%;
+                  margin-left:( $p_gutterWidth / $p_gridWidth )*100%;
+                  @if $p_outline == true {
+                        outline: 1px solid red;
+                  }
+            }
+      } 
+}
+
+// Automate @font-face
+//
+// $p_fontData:    a list with nested list of (font-family, url)
+//                 ( ( fontLabel, url ), ... ( fontLabel, url ) );
+@mixin addFontFace( $p_fontData ){
+      @for $i from 1 through length($p_fontData) {
+
+            $fontData:  nth( $p_fontData, $i);
+            $label:     nth( $fontData,   1 );
+            $url:       nth( $fontData,   2 );
+
+            @font-face {
+                  font-family: #{ $label };
+                  src:         url(#{ $url });
+            }
+      }
+}
+
+@mixin targetScale( $targetScale ){
+      -ms-transform:          scale($targetScale); // IE 9 */
+      -moz-transform:         scale($targetScale); // Firefox */
+      -webkit-transform:      scale($targetScale); // Safari and Chrome */
+      -o-transform:           scale($targetScale); // Opera */
+      transform:              scale($targetScale);
+}
+
+@mixin transitionTo( $target, $s, $ease ){
+      -moz-transition:        $target $s $ease; // Firefox 4 */
+      -webkit-transition:     $target $s $ease; // Safari and Chrome */
+      -o-transition:          $target $s $ease; // Opera */
+      -webkit-transition:     $target $s $ease;
+}
+
+/* FONTS ------------------------------------------------------- */
+$fontList:  (( FreightSansProLight,   "../fonts/FreigSanProMed.otf"          ),
+             ( FreightSansProBook,    "../fonts/FreigSanProBook.otf"     ),
+             ( FreightSansProMediun,  "../fonts/FreigSanProMed.otf"  ));
+
+@include addFontFace( $fontList );
+
+
+/* GENERAL ELEMENTS ------------------------------------------------------------------------ */
+//*{ outline:1px solid red}
+
+a{    text-decoration:none; }
+
+
+body { 
+      font-family:Helvetica, Arial, sans-serif;
+      font-size:100%;
+      background-color:rgba(255,255,255,.1);
+      line-height:1.125em;
+} 
+
+p {   
+      
+      color:#4d4d4d;
+      font-size:1em;
+      line-height:1.6;
+      margin-bottom:1.6em;
+}
+
+h1 {
+      font-family:      'FreightSansProMediun';
+      font-size: 2em;
+}
+
+h2 {
+
+      line-height:1.8;
+      font-weight: bold;
+}
+
+/* NAVIGATION & FOOTER --------------------------------------------------------------------- */
+
+#audienceNavigation{
+      position:               fixed;
+      margin:                 0;
+      top:                    0px;
+      width:                  100%;
+      height:                 40px;
+      box-shadow:             0px -2px 8px #888;
+      background-color:       rgba(102,99,97,1);
+      z-index:1000;
+
+      .nav{
+      margin:                 0 auto;
+      overflow:               auto; // key for div not collapsing 
+   
+            ul {
+                  margin-top:       10px;
+                  margin-left:      160px;
+                  //margin-left:      2.08333333333%; // (  20 / 960 ) * 100 
+                 // float:            left;
+             
+            }
+
+            li {  display:          inline;  
+
+                  a {
+                        color:                  #FFFFFF;
+                        padding-right:           60px;  
+                        font-family:            'FreightSansProBook';
+                        letter-spacing:         .1em;
+                        font-size:              .75em;
+                        margin:                 0;
+                        text-decoration:        none;
+                        @include transitionTo(  all, 0.2s, linear);
+
+                        &:hover, &:focus{
+                              color:            #fff;
+                              background:       rgba(0,0,0,.4);
+                        }
+                  }
+            }
+
+      }
+}
+
+
+
+#mainNavigation{
+      //position:               fixed;
+      margin:                 0;
+      top:                    570px;
+      width:                  100%;
+      height:                 180px;
+      box-shadow:             0px -2px 8px #888;
+      background-color:       rgba(240,96,17,1);
+      z-index:1001;
+
+      .nav{
+      margin:                 0 auto;
+      //overflow:               auto; // key for div not collapsing 
+         
+            .logo {
+                  background: url("../images/logoNav.png") 0 0 no-repeat;
+                  //width:                  20.8333333333%;
+                  width:139px;
+                  height:                 162px;
+                  //margin-top:             20px;
+                  //margin-left:            2.08333333333%; // (  20 / 960 ) * 100 
+                  float:left;
+
+                  text-indent: 100%;
+                  white-space: nowrap;
+                  display:inline;
+                  background-color:green;
+                  overflow:hidden;
+            }
+
+            ul {
+                  margin-top:       0px;
+                  margin-left:      0px;
+                  //margin-left:      2.08333333333%; // (  20 / 960 ) * 100 
+                  outline: 1px solid red;
+                  display:inline;
+              
+                  li {  
+
+              
+                       outline:           1px solid blue;
+                        
+                       padding:10px;
+
+                        ul{
+                            
+                              width:300px;
+
+                              li{
+
+                                          outline: 1px dotted green;
+                              }
+                       }
+
+
+
+                  }
+            }
+
+
+
+      }
+}
+
+
+
+
+
+#footer {
+      background-color:       rgba(26,33,39,.9);
+      width:                  100%;
+      margin:                 0 auto;
+      height:                 50px;
+      text-align:             center;
+
+      ul {
+            overflow:         auto;
+            display: inline-block;
+      }
+
+      li{
+            float:left;
+            padding-right:    30px;
+            margin-top:       15px;
+      
+            &:last-child{
+                  padding-right:     0;
+            }
+      }
+
+      a{
+            color:            $linkColor;
+            text-decoration:  none;
+            font-size:.8em;
+      }
+
+}
+
+/* HERO ------------------------------------------------------------------------------------- */
+
+#hero {
+      width:                  100%;
+      top:                    0;
+      overflow:               hidden;
+      text-align:             center;
+
+      //position:               fixed;
+      z-index:                -100;
+      height:                 600px;
+      //margin:auto;
+
+      background: url(../images/corgi.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+
+      img {
+            //width:            100%;
+            //max-width:        1400px;
+            //min-width:        500px;
+            //min-height:       600px;
+            //max-width:100%;
+            //margin:auto;
+            //margin-left:-25%;
+            //max-height:100%;
+
+      }
+}
+
+
+/* GRID ----------------------------------------------------------------------------------- */
+
+#content{
+      position:relative;
+      margin:                 0px auto;
+      margin-top:             -90px;
+      background:       rgba(255,255,255,.4);
+      overflow:               auto; // key for div not collapsing */
+}
+
+.column {
+      float:                  left;
+      @include transitionTo(  all, .25s, ease);
+}
+
+.full {
+      width:                  100%;
+      max-width:              1200px;
+}
+
+//Grid definition
+$gridList:(one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve);
+$gridWidth:980px;
+$gridMargin:20px;
+$columnWidth:60px;
+$gutterWidth:20px;
+
+@include creatGrid( $gridWidth, $columnWidth, $gutterWidth, $gridList, false );
+
+//the definitions of these have to be after the grid system, otherwise they arfe overwritten
+.first{
+      margin-left:( $gridMargin / $gridWidth )*100%;
+}
+
+.last{
+      margin-right:( $gridMargin / $gridWidth )*100%;
+}
+
+#sidebar {
+      outline-left:1px solid rgba(26,33,39,.1);
+
+ 
+}
+
+/* TYPOGRAPHY ----------------------------------------------------------------------------- */
+.leading { font-size:1.3em; line-height:1.4;}
+
+
+.left {  min-width:25%; max-width:40%; margin-left:-20%; padding-right:25px}
+//.right { position:relative;  margin-left:-50%;  min-height:1px; }
+.pullQuote p{
+      font:                   1.3em 'JosefinSlabLightItalic',serif;
+      line-height:            1.4;
+      text-align:             center;
+      //position:relative;
+      //outline:1px solid red;
+      //left:150px;
+      //margin-left:150px;
+      //padding-top:            15px;
+      //border-top:             5px solid;
+}
+
+aside {
+
+      //outline left hack
+      div { border-left: 1px solid $borderColor;  }
+
+      //outline-left: 1px solid $borderColor;
+     h3 { margin-left:15px; margin-bottom:.5em;}
+    
+
+      li {
+            font:                   .9em 'JosefinSansSemibold',serif;
+            //padding-bottom:         10px;
+            //padding-top:            10px;
+            line-height:            140%;
+            //letter-spacing:         .5px;
+            
+            text-transform:         uppercase;
+            //border-bottom:          1px dotted #000;
+            //margin-right:           2.08333333333%; 
+
+            //&:first-child{          border-top: 1px dotted #000; }
+  
+            ul{
+                  border-bottom:          1px solid $borderColor;
+                  padding-bottom:         20px;
+                  padding-top:            20px;
+                  padding-left: 15px;
+                  padding-right:15px;
+            }
+
+
+      }
+      
+
+
+      div ul li:hover{ 
+                  background-color:$borderColor;
+      }
+
+      div ul li ul li:hover{
+           background-color:rgba(26,33,39,0);;
+      } 
+
+      a{ color:               $linkColor; }
+
+
+}
+
+.storyTitle{
+      color: $linkColor;
+
+}
+
+.storyWriter{
+      font:                   .8em Helvetica, Arial, sans-serif;
+      color: $darkBlue;
+      //text-transform:         none;
+      letter-spacing:1px;
+}
+
+.flexImage {      width:      100%; }
+
+a.imageLink{
+      width:                  30%;
+      float:                  right;
+      margin-left:            2.08333333333%;
+      border:                 5px solid black;
+      display:                block;
+      @include transitionTo(  all, 0.2s, linear);
+
+      &:hover, &:focus {
+            border:                 5px solid red;
+            @include targetScale(1.1);
+      }
+
+}
+
+.title{
+      //text-align:             center;
+      text-transform:         uppercase;
+      font-size:3em;
+      line-height:            1.5em;
+      letter-spacing:         .1em;
+      margin-bottom:         15px;
+      margin-top:            15px;
+}
+
+.forceHeightMin  { min-height:1px}
+.forceHeightFull { min-height:100%}
+
+/* MEDIA QUERIES --------------------------------------------------------------------------- */
+
+@media screen and (max-width: 780px) {
+
+      #nav{ 
+            text-align:       center;
+
+            ul {
+                  width:            95.8333333333%;
+                  margin-right:     2.08333333333%; // (  20 / 960 ) * 100 */
+                  margin-bottom:    17px;
+            }
+
+            li:first-child {
+                  margin-left:      0;
+            }
+      }
+      
+      #logo {
+            width:                  100%;
+            margin-left:            0;
+            margin-right:           0;
+            margin-bottom:          0px;
+      }
+
+      #hero {
+            margin-top:105px;
+            height:500px;
+      }
+      
+      .singleColumn {
+            width:90%;
+            margin-left: 5%;
+            margin-right: 5%;
+      }
+
+      #quote, #story, #sidebar {
+            @extend .singleColumn;
+      }
+
+      #quote {
+            width:90%;
+            margin-left: 5%;
+            margin-right: 5%;
+      }
+
+      #quote p, #sidebar ul { text-align:center; }
+      .forceHeightFull  { min-height:0 }
+}
+
+@media screen and (max-width: 650px) {
+      
+      #nav{ 
+            text-align:center; 
+
+            ul {
+                  width:            100%;
+                  margin:           0;
+            }
+
+            li {
+                  display:          block;
+                  padding-top:      10px;
+                  padding-bottom:   10px;
+                  border-top:       1px dotted #000;
+                  margin:           0;
+                  overflow:         hidden;
+            }
+      }
+
+
+      #hero {
+            margin-top:0;
+            height:500px;
+      }
+
+      #navigationWrap{
+            position:relative;
+      }
+
+      .singleColumn {
+            width:90%;
+            margin-left: 5%;
+            margin-right: 5%;
+      }
+
+      #story > p {
+            font-size:1.1em;
+      }
+      
+      #quote, #story, #sidebar {
+            @extend .singleColumn;
+      }
+
+      
+}
+
+
