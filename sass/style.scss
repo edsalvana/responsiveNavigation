@@ -69,9 +69,11 @@ $borderColor: rgba(26,33,39,.1);
 }
 
 /* FONTS ------------------------------------------------------- */
-$fontList:  (( FreightSansProLight,   "../fonts/FreigSanProLig.otf"          ),
-             ( FreightSansProBook,    "../fonts/FreigSanProBook.otf"     ),
-             ( FreightSansProMedium,  "../fonts/FreigSanProMed.otf"  ));
+$fontList:  (( FreightSansProLight,   "../fonts/FreigSanProLig.otf"         ),
+             ( FreightSansProBook,    "../fonts/FreigSanProBook.otf"        ),
+             ( FreightSansProMedium,  "../fonts/FreigSanProMed.otf"         ),
+             ( FreightSansProSemibold,"../fonts/FreigSanProSem.otf"     )
+             );
 
 @include addFontFace( $fontList );
 
@@ -89,25 +91,6 @@ body {
       line-height:1.125em;
 } 
 
-p {   
-      
-      color:#4d4d4d;
-      font-size:1em;
-      line-height:1.6;
-      margin-bottom:1.6em;
-}
-
-h1 {
-      font-family:      'FreightSansProMedium';
-      font-size: 2em;
-}
-
-h2 {
-
-      line-height:1.8;
-      font-weight: bold;
-}
-
 /* NAVIGATION & FOOTER --------------------------------------------------------------------- */
 
 #audienceNavigation{
@@ -120,19 +103,20 @@ h2 {
       background-color:       rgba(102,99,97,1);
       z-index:1000;
 
+      //clean up this nav, it's duplicated in the main nav
       .nav{
-      margin:                 0 auto;
-      overflow:               auto; // key for div not collapsing 
+            margin:           0 auto;
+            overflow:         auto; // key for div not collapsing 
    
             ul {
                   margin-top:       10px;
                   margin-left:      160px;
                   //margin-left:      2.08333333333%; // (  20 / 960 ) * 100 
-                 // float:            left;
-             
+                  // float:            left;
             }
 
-            li {  display:          inline;  
+            li {  
+                  display:          inline;  
 
                   a {
                         color:                  #FFFFFF;
@@ -157,147 +141,122 @@ h2 {
 
 
 #mainNavigation{
-      //position:               fixed;
+      position:               relative;
       margin:                 0;
       top:                    570px;
       width:                  100%;
       height:                 180px;
-      box-shadow:             0px -2px 8px #888;
+      box-shadow:             0px -12px   64px #000;
       background-color:       rgba(240,96,17,1);
       z-index:1001;
 
+      //clean up this nav, it's duplicated in the audience nav
       .nav{
-      margin:                 0 auto;
-      //overflow:               auto; // key for div not collapsing 
+            margin:                 0 auto;
+            white-space:-4px;
+            //overflow:               auto; // key for div not collapsing 
          
             .logo {
                   background: url("../images/logoNav.png") 0 0 no-repeat;
                   //width:                  20.8333333333%;
-                  width:139px;
-                  height:                 162px;
+                  width:                    140px;
+                  height:                   180px;
                   //margin-top:             20px;
                   //margin-left:            2.08333333333%; // (  20 / 960 ) * 100 
-                  float:left;
-
                   text-indent: 100%;
                   white-space: nowrap;
-                  display:inline;
+                  display:inline-block;
                   background-color:green;
                   overflow:hidden;
+                  white-space: normal;
+                  float:left;
+                  
+            }
+
+            ul {  
+                  position: relative;
+                  height: 100%;
+                  overflow: hidden;
+                  background-color:#ec5300;
+                  border-right:1px solid #dc4f04;
+
+                  li {  
+                        vertical-align: top;
+                        float:  left;
+                        height: 100%;
+                        width:25%;
+                        background:url(../images/dividerStroke.png) repeat-y 0% 0%, url(../images/navArrow.png) no-repeat 10% 80% ;
+                        //background:url(../images/dividerStroke.png) repeat-y 0% 80%;
+                        img { position:relative;  left:10%; top:-10px; }
+                  }
+
             }
 
             h2{   
                   font-family: 'FreightSansProBook';
-                  font-size:              1.25em;
+                  font-size:              1.3125em;
                   color: #FFFFFF;
-
+                  margin-top:30px; 
+                  margin-left:10%;
+                  margin-right:10%;
             }
 
             aside {
                   font-family: 'FreightSansProLight';
-                  font-size:              .875em;
-                  letter-spacing:.1em;
+                  font-size:  .875em;
+                  line-height: 1.1875em;
+                  height:80px;
                   color: #f0c1a9;  
-        
+                  margin:10px 20px 0 0;
+                  margin-left:10%;
+                  margin-right:10%;
             }
-
-            ul {
-                  margin-top:       0px;
-                  margin-left:      0px;
-                  //margin-left:      2.08333333333%; // (  20 / 960 ) * 100 
-                  //outline: 1px solid red;
-                  float:left;
-              
-                  li {  
-
-              
-                       //outline:           1px solid blue;
-                        display:inline;
-                  
-
-                        ul{
-                              float:left;
-                              width:300px;
-
-                              li{
-                                    display:block;
-                                    //outline: 1px dotted green;
-                              }
-                       }
-
-
-
-                  }
-            }
-
-
 
       }
 }
 
 
 
-
-
-#footer {
-      background-color:       rgba(26,33,39,.9);
-      width:                  100%;
-      margin:                 0 auto;
-      height:                 50px;
-      text-align:             center;
-
-      ul {
-            overflow:         auto;
-            display: inline-block;
-      }
-
-      li{
-            float:left;
-            padding-right:    30px;
-            margin-top:       15px;
-      
-            &:last-child{
-                  padding-right:     0;
-            }
-      }
-
-      a{
-            color:            $linkColor;
-            text-decoration:  none;
-            font-size:.8em;
-      }
-
-}
 
 /* HERO ------------------------------------------------------------------------------------- */
 
 #hero {
       width:                  100%;
-      top:                    0;
+      top:                    40px;
       overflow:               hidden;
       text-align:             center;
 
-      //position:               fixed;
+      position:               fixed;
       z-index:                -100;
-      height:                 600px;
+      height:                 530px;
       //margin:auto;
 
-      background: url(../images/corgi.jpg) no-repeat center center fixed; 
+      background: url(../images/diver.png) no-repeat center center fixed; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
 
-      img {
-            //width:            100%;
-            //max-width:        1400px;
-            //min-width:        500px;
-            //min-height:       600px;
-            //max-width:100%;
-            //margin:auto;
-            //margin-left:-25%;
-            //max-height:100%;
+      .caption {
 
+            position:relative;
+            top:350px;
+             
+
+            h1 {
+                  font-family: 'FreightSansProSemibold';
+                  font-size:   5em;
+                  color: #ffffff;
+                  margin-bottom:.5em; 
+                  //letter-spacing:.1em;
+                  
+            }
+
+            h2 {
+                  font-family: 'FreightSansProLight';
+                  font-size:   1.3125em;
+                  color: #ffffff; 
+            }
       }
 }
 
@@ -319,13 +278,13 @@ h2 {
 
 .full {
       width:                  100%;
-      max-width:              1200px;
+      max-width:              960px;
 }
 
 //Grid definition
 $gridList:(one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve);
-$gridWidth:980px;
-$gridMargin:20px;
+$gridWidth:960px;
+$gridMargin:10px;
 $columnWidth:60px;
 $gutterWidth:20px;
 
@@ -364,146 +323,83 @@ $gutterWidth:20px;
       //border-top:             5px solid;
 }
 
-aside {
-
-      //outline left hack
-      div { border-left: 1px solid $borderColor;  }
-
-      //outline-left: 1px solid $borderColor;
-     h3 { margin-left:15px; margin-bottom:.5em;}
-    
-
-      li {
-            font:                   .9em 'JosefinSansSemibold',serif;
-            //padding-bottom:         10px;
-            //padding-top:            10px;
-            line-height:            140%;
-            //letter-spacing:         .5px;
-            
-            text-transform:         uppercase;
-            //border-bottom:          1px dotted #000;
-            //margin-right:           2.08333333333%; 
-
-            //&:first-child{          border-top: 1px dotted #000; }
-  
-            ul{
-                  border-bottom:          1px solid $borderColor;
-                  padding-bottom:         20px;
-                  padding-top:            20px;
-                  padding-left: 15px;
-                  padding-right:15px;
-            }
-
-
-      }
-      
-
-
-      div ul li:hover{ 
-                  background-color:$borderColor;
-      }
-
-      div ul li ul li:hover{
-           background-color:rgba(26,33,39,0);;
-      } 
-
-      a{ color:               $linkColor; }
-
-
-}
-
-.storyTitle{
-      color: $linkColor;
-
-}
-
-.storyWriter{
-      font:                   .8em Helvetica, Arial, sans-serif;
-      color: $darkBlue;
-      //text-transform:         none;
-      letter-spacing:1px;
-}
-
-.flexImage {      width:      100%; }
-
-a.imageLink{
-      width:                  30%;
-      float:                  right;
-      margin-left:            2.08333333333%;
-      border:                 5px solid black;
-      display:                block;
-      @include transitionTo(  all, 0.2s, linear);
-
-      &:hover, &:focus {
-            border:                 5px solid red;
-            @include targetScale(1.1);
-      }
-
-}
-
-.title{
-      //text-align:             center;
-      text-transform:         uppercase;
-      font-size:3em;
-      line-height:            1.5em;
-      letter-spacing:         .1em;
-      margin-bottom:         15px;
-      margin-top:            15px;
-}
 
 .forceHeightMin  { min-height:1px}
 .forceHeightFull { min-height:100%}
 
 /* MEDIA QUERIES --------------------------------------------------------------------------- */
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 800px) {
+      #mainNavigation{
+      position:               relative;
+      margin:                 0;
+      top:                    570px;
+      width:                  100%;
+      height:                 180px;
+      box-shadow:             0px -12px   64px #000;
+      background-color:       rgba(240,96,17,1);
+      z-index:1001;
 
-      #nav{ 
-            text-align:       center;
-
-            ul {
-                  width:            95.8333333333%;
-                  margin-right:     2.08333333333%; // (  20 / 960 ) * 100 */
-                  margin-bottom:    17px;
+      //clean up this nav, it's duplicated in the audience nav
+      .nav{
+            margin:                 0 auto;
+            white-space:-4px;
+            //overflow:               auto; // key for div not collapsing 
+         
+            .logo {
+                  background: url("../images/logoNav.png") 0 0 no-repeat;
+                  //width:                  20.8333333333%;
+                  width:                    140px;
+                  height:                   180px;
+                  //margin-top:             20px;
+                  //margin-left:            2.08333333333%; // (  20 / 960 ) * 100 
+                  text-indent: 100%;
+                  white-space: nowrap;
+                  display:inline-block;
+                  background-color:green;
+                  overflow:hidden;
+                  white-space: normal;
+               
+                  
             }
 
-            li:first-child {
-                  margin-left:      0;
+            ul {  
+                  position: relative;
+                  height: 100%;
+                  overflow: hidden;
+                  background-color:#ec5300;
+                  border-right:1px solid #dc4f04;
+
+                  li {  
+                        vertical-align: top;
+                   
+                        height: 25%;
+                        width:100%;
+                        background:url(../images/dividerStroke.png) repeat-y 0% 0%;
+                    //    img { position:relative;  top:80px }
+                  }
+
             }
-      }
-      
-      #logo {
-            width:                  100%;
-            margin-left:            0;
-            margin-right:           0;
-            margin-bottom:          0px;
-      }
 
-      #hero {
-            margin-top:105px;
-            height:500px;
-      }
-      
-      .singleColumn {
-            width:90%;
-            margin-left: 5%;
-            margin-right: 5%;
-      }
+            h2{   
+                  font-family: 'FreightSansProBook';
+                  font-size:              1em;
+                  color: #FFFFFF;
+                 // margin-top:30px; 
+                  margin-left:10%;
+                  margin-right:10%;
+            }
 
-      #quote, #story, #sidebar {
-            @extend .singleColumn;
-      }
+            aside {
+                  display:none;
+            }
 
-      #quote {
-            width:90%;
-            margin-left: 5%;
-            margin-right: 5%;
       }
-
-      #quote p, #sidebar ul { text-align:center; }
-      .forceHeightFull  { min-height:0 }
 }
 
+}
+
+/*
 @media screen and (max-width: 650px) {
       
       #nav{ 
@@ -550,5 +446,5 @@ a.imageLink{
 
       
 }
-
+*/
 
