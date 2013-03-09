@@ -187,15 +187,27 @@ body {
   float: left;
   height: 100%;
   width: 25%;
-  background: url(../images/dividerStroke.png) repeat-y 0% 0%, url(../images/navArrow.png) no-repeat 10% 80%;
+  background: url(../images/navArrow.png) no-repeat 10% 80%;
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
+  border-width: 0 1px 0 1px;
+  box-sizing: border-box;
 }
-/* line 190, ../sass/style.scss */
+/* line 194, ../sass/style.scss */
 #mainNavigation .nav ul li img {
   position: relative;
   left: 10%;
   top: -10px;
 }
 /* line 195, ../sass/style.scss */
+#mainNavigation .nav ul li:first-child {
+  border-width: 0 1px 0 0;
+}
+/* line 198, ../sass/style.scss */
+#mainNavigation .nav ul li:last-child {
+  border-width: 0 0 0 1px;
+}
+/* line 205, ../sass/style.scss */
 #mainNavigation .nav h2 {
   font-family: 'FreightSansProBook';
   font-size: 1.3125em;
@@ -204,7 +216,7 @@ body {
   margin-left: 10%;
   margin-right: 10%;
 }
-/* line 204, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 #mainNavigation .nav aside {
   font-family: 'FreightSansProLight';
   font-size: .875em;
@@ -217,7 +229,7 @@ body {
 }
 
 /* HERO ------------------------------------------------------------------------------------- */
-/* line 223, ../sass/style.scss */
+/* line 233, ../sass/style.scss */
 #hero {
   width: 100%;
   top: 40px;
@@ -232,19 +244,19 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 240, ../sass/style.scss */
+/* line 250, ../sass/style.scss */
 #hero .caption {
   position: relative;
   top: 350px;
 }
-/* line 246, ../sass/style.scss */
+/* line 256, ../sass/style.scss */
 #hero .caption h1 {
   font-family: 'FreightSansProSemibold';
   font-size: 5em;
   color: #ffffff;
   margin-bottom: .5em;
 }
-/* line 255, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
 #hero .caption h2 {
   font-family: 'FreightSansProLight';
   font-size: 1.3125em;
@@ -252,7 +264,7 @@ body {
 }
 
 /* GRID ----------------------------------------------------------------------------------- */
-/* line 266, ../sass/style.scss */
+/* line 276, ../sass/style.scss */
 #content {
   position: relative;
   margin: 0px auto;
@@ -261,7 +273,7 @@ body {
   overflow: auto;
 }
 
-/* line 274, ../sass/style.scss */
+/* line 284, ../sass/style.scss */
 .column {
   float: left;
   -moz-transition: all 0.25s ease;
@@ -270,7 +282,7 @@ body {
   -webkit-transition: all 0.25s ease;
 }
 
-/* line 279, ../sass/style.scss */
+/* line 289, ../sass/style.scss */
 .full {
   width: 100%;
   max-width: 960px;
@@ -348,29 +360,29 @@ body {
   margin-left: 2.08333%;
 }
 
-/* line 294, ../sass/style.scss */
+/* line 304, ../sass/style.scss */
 .first {
   margin-left: 1.04167%;
 }
 
-/* line 298, ../sass/style.scss */
+/* line 308, ../sass/style.scss */
 .last {
   margin-right: 1.04167%;
 }
 
-/* line 302, ../sass/style.scss */
+/* line 312, ../sass/style.scss */
 #sidebar {
   outline-left: 1px solid rgba(26, 33, 39, 0.1);
 }
 
 /* TYPOGRAPHY ----------------------------------------------------------------------------- */
-/* line 309, ../sass/style.scss */
+/* line 319, ../sass/style.scss */
 .leading {
   font-size: 1.3em;
   line-height: 1.4;
 }
 
-/* line 312, ../sass/style.scss */
+/* line 322, ../sass/style.scss */
 .left {
   min-width: 25%;
   max-width: 40%;
@@ -378,26 +390,26 @@ body {
   padding-right: 25px;
 }
 
-/* line 314, ../sass/style.scss */
+/* line 324, ../sass/style.scss */
 .pullQuote p {
   font: 1.3em 'JosefinSlabLightItalic',serif;
   line-height: 1.4;
   text-align: center;
 }
 
-/* line 327, ../sass/style.scss */
+/* line 337, ../sass/style.scss */
 .forceHeightMin {
   min-height: 1px;
 }
 
-/* line 328, ../sass/style.scss */
+/* line 338, ../sass/style.scss */
 .forceHeightFull {
   min-height: 100%;
 }
 
 /* MEDIA QUERIES --------------------------------------------------------------------------- */
 @media screen and (max-width: 800px) {
-  /* line 333, ../sass/style.scss */
+  /* line 343, ../sass/style.scss */
   #mainNavigation {
     position: relative;
     margin: 0;
@@ -408,12 +420,12 @@ body {
     background-color: #f06011;
     z-index: 1001;
   }
-  /* line 344, ../sass/style.scss */
+  /* line 354, ../sass/style.scss */
   #mainNavigation .nav {
     margin: 0 auto;
     white-space: -4px;
   }
-  /* line 349, ../sass/style.scss */
+  /* line 359, ../sass/style.scss */
   #mainNavigation .nav .logo {
     background: url("../images/logoNav.png") 0 0 no-repeat;
     width: 140px;
@@ -425,7 +437,7 @@ body {
     overflow: hidden;
     white-space: normal;
   }
-  /* line 366, ../sass/style.scss */
+  /* line 376, ../sass/style.scss */
   #mainNavigation .nav ul {
     position: relative;
     height: 100%;
@@ -433,14 +445,26 @@ body {
     background-color: #ec5300;
     border-right: 1px solid #dc4f04;
   }
-  /* line 373, ../sass/style.scss */
+  /* line 383, ../sass/style.scss */
   #mainNavigation .nav ul li {
-    vertical-align: top;
-    height: 25%;
-    width: 100%;
-    background: url(../images/dividerStroke.png) repeat-y 0% 0%;
+    float: none;
+    width: auto;
+    padding: 0 1em;
+    line-height: 2.8em;
+    height: auto;
+    cursor: pointer;
+    background: url(../images/navArrow.png) no-repeat 100% 50%;
+    border-width: 1px 0 1px 0;
   }
-  /* line 384, ../sass/style.scss */
+  /* line 394, ../sass/style.scss */
+  #mainNavigation .nav ul li:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  /* line 398, ../sass/style.scss */
+  #mainNavigation .nav ul li h2 {
+    margin: 0;
+  }
+  /* line 405, ../sass/style.scss */
   #mainNavigation .nav h2 {
     font-family: 'FreightSansProBook';
     font-size: 1em;
@@ -448,7 +472,7 @@ body {
     margin-left: 10%;
     margin-right: 10%;
   }
-  /* line 393, ../sass/style.scss */
+  /* line 414, ../sass/style.scss */
   #mainNavigation .nav aside {
     display: none;
   }
