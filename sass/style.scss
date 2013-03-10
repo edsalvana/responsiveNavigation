@@ -93,45 +93,44 @@ body {
 
 /* NAVIGATION & FOOTER --------------------------------------------------------------------- */
 
+//audience nav should be fixed position until the hero is out of view
 #audienceNavigation{
+
       position:               fixed;
-      margin:                 0;
       top:                    0px;
       width:                  100%;
       height:                 40px;
-      box-shadow:             0px -2px 8px #888;
       background-color:       rgba(102,99,97,1);
-      z-index:1000;
 
-      //clean up this nav, it's duplicated in the main nav
-      .nav{
+      div {
             margin:           0 auto;
             overflow:         auto; // key for div not collapsing 
-   
+            
             ul {
-                  margin-top:       10px;
+                  
                   margin-left:      160px;
-                  //margin-left:      2.08333333333%; // (  20 / 960 ) * 100 
-                  // float:            left;
+
             }
 
             li {  
-                  display:          inline;  
-
+                  padding-top:       10px;
+                  padding-left:       30px;
+                  padding-right:      30px;
+                  display:          inline-block;  
+                  height: 30px;
                   a {
-                        color:                  #FFFFFF;
-                        padding-right:           60px;  
                         font-family:            'FreightSansProBook';
                         letter-spacing:         .1em;
                         font-size:              .75em;
-                        margin:                 0;
-                        text-decoration:        none;
+                        color:                  #fff;
+                        //margin-right:           60px; 
                         @include transitionTo(  all, 0.2s, linear);
 
-                        &:hover, &:focus{
-                              color:            #fff;
-                              background:       rgba(0,0,0,.4);
-                        }
+
+                  }
+
+                  &:hover, &:focus{
+                        background:       rgba(0,0,0,.4);
                   }
             }
 
@@ -143,7 +142,7 @@ body {
 #mainNavigation{
       position:               relative;
       margin:                 0;
-      top:                    570px;
+      margin-top:                    570px;
       width:                  100%;
       height:                 180px;
       box-shadow:             0px -12px   64px #000;
@@ -151,26 +150,19 @@ body {
       z-index:1001;
 
       //clean up this nav, it's duplicated in the audience nav
-      .nav{
+      div{
             margin:                 0 auto;
             white-space:-4px;
             //overflow:               auto; // key for div not collapsing 
          
             .logo {
                   background: url("../images/logoNav.png") 0 0 no-repeat;
-                  //width:                  20.8333333333%;
                   width:                    140px;
                   height:                   180px;
-                  //margin-top:             20px;
-                  //margin-left:            2.08333333333%; // (  20 / 960 ) * 100 
                   text-indent: 100%;
                   white-space: nowrap;
-                  display:inline-block;
-                  background-color:green;
                   overflow:hidden;
-                  white-space: normal;
                   float:left;
-                  
             }
 
             ul {  
@@ -194,10 +186,14 @@ body {
                         //background:url(../images/dividerStroke.png) repeat-y 0% 80%;
                         img { position:relative;  left:10%; top:-10px; }
                         &:first-child {
-                              border-width:1px 1px 0 1px;
+                              border-width:0px 1px 0 1px;
                         }
                         &:last-child {
                               border-width:0 0 0 1px;
+                        }
+
+                        &:hover, &:focus{
+                              background: rgba(0,0,0,.05) url(../images/navArrow.png) no-repeat 10% 80% ;
                         }
                   }
 
@@ -274,12 +270,20 @@ body {
 
 /* GRID ----------------------------------------------------------------------------------- */
 
+#wrapper{
+      width:100%;
+      background-color:#fff;
+
+}
+
 #content{
       position:relative;
       margin:                 0px auto;
-      margin-top:             -90px;
+      //margin-top:             -90px;
       background:       rgba(255,255,255,.4);
       overflow:               auto; // key for div not collapsing */
+      height: 3000px;
+      background-color:white;
 }
 
 .column {
@@ -351,8 +355,11 @@ $gutterWidth:20px;
             background-color:       rgba(240,96,17,1);
             z-index:1001;
 
+
+
+
             //clean up this nav, it's duplicated in the audience nav
-            .nav{
+            div{
                   margin:                 0 auto;
                   white-space:-4px;
 
@@ -374,7 +381,7 @@ $gutterWidth:20px;
                              }
 
                               &:first-child {
-                                    border-width:1px 0 1px 1px;
+                                    border-width:0px 0 1px 1px;
                               }
                               &:last-child {
                                     border-width:1px 0px 1px 1px;
@@ -409,7 +416,7 @@ $gutterWidth:20px;
             z-index:1000;
 
             //clean up this nav, it's duplicated in the main nav
-            .nav{
+            div {
                   margin:           0 auto;
                   overflow:         auto; // key for div not collapsing 
          
@@ -428,7 +435,7 @@ $gutterWidth:20px;
                               padding-right:           10%;  
                               font-family:            'FreightSansProBook';
                               letter-spacing:         .1em;
-                              font-size:              .75em;
+                              font-size:              .5em;
                               margin:                 0;
                               text-decoration:        none;
                               @include transitionTo(  all, 0.2s, linear);

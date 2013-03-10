@@ -1,4 +1,4 @@
-/* line 17, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -99,90 +99,83 @@ body {
 }
 
 /* NAVIGATION & FOOTER --------------------------------------------------------------------- */
-/* line 96, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 #audienceNavigation {
   position: fixed;
-  margin: 0;
   top: 0px;
   width: 100%;
   height: 40px;
-  box-shadow: 0px -2px 8px #888888;
   background-color: #666361;
-  z-index: 1000;
 }
-/* line 107, ../sass/style.scss */
-#audienceNavigation .nav {
+/* line 105, ../sass/style.scss */
+#audienceNavigation div {
   margin: 0 auto;
   overflow: auto;
 }
-/* line 111, ../sass/style.scss */
-#audienceNavigation .nav ul {
-  margin-top: 10px;
+/* line 109, ../sass/style.scss */
+#audienceNavigation div ul {
   margin-left: 160px;
 }
-/* line 118, ../sass/style.scss */
-#audienceNavigation .nav li {
-  display: inline;
+/* line 115, ../sass/style.scss */
+#audienceNavigation div li {
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: inline-block;
+  height: 30px;
 }
 /* line 121, ../sass/style.scss */
-#audienceNavigation .nav li a {
-  color: #FFFFFF;
-  padding-right: 60px;
+#audienceNavigation div li a {
   font-family: 'FreightSansProBook';
   letter-spacing: .1em;
   font-size: .75em;
-  margin: 0;
-  text-decoration: none;
+  color: #fff;
   -moz-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
 }
-/* line 131, ../sass/style.scss */
-#audienceNavigation .nav li a:hover, #audienceNavigation .nav li a:focus {
-  color: #fff;
+/* line 132, ../sass/style.scss */
+#audienceNavigation div li:hover, #audienceNavigation div li:focus {
   background: rgba(0, 0, 0, 0.4);
 }
 
-/* line 143, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 #mainNavigation {
   position: relative;
   margin: 0;
-  top: 570px;
+  margin-top: 570px;
   width: 100%;
   height: 180px;
   box-shadow: 0px -12px 64px black;
   background-color: #f06011;
   z-index: 1001;
 }
-/* line 154, ../sass/style.scss */
-#mainNavigation .nav {
+/* line 153, ../sass/style.scss */
+#mainNavigation div {
   margin: 0 auto;
   white-space: -4px;
 }
-/* line 159, ../sass/style.scss */
-#mainNavigation .nav .logo {
+/* line 158, ../sass/style.scss */
+#mainNavigation div .logo {
   background: url("../images/logoNav.png") 0 0 no-repeat;
   width: 140px;
   height: 180px;
   text-indent: 100%;
   white-space: nowrap;
-  display: inline-block;
-  background-color: green;
   overflow: hidden;
-  white-space: normal;
   float: left;
 }
-/* line 176, ../sass/style.scss */
-#mainNavigation .nav ul {
+/* line 168, ../sass/style.scss */
+#mainNavigation div ul {
   position: relative;
   height: 100%;
   overflow: hidden;
   background-color: #ec5300;
   border-right: 1px solid #dc4f04;
 }
-/* line 183, ../sass/style.scss */
-#mainNavigation .nav ul li {
+/* line 175, ../sass/style.scss */
+#mainNavigation div ul li {
   vertical-align: top;
   float: left;
   height: 100%;
@@ -193,22 +186,26 @@ body {
   border-width: 0 1px 0 1px;
   box-sizing: border-box;
 }
-/* line 195, ../sass/style.scss */
-#mainNavigation .nav ul li img {
+/* line 187, ../sass/style.scss */
+#mainNavigation div ul li img {
   position: relative;
   left: 10%;
   top: -10px;
 }
-/* line 196, ../sass/style.scss */
-#mainNavigation .nav ul li:first-child {
-  border-width: 1px 1px 0 1px;
+/* line 188, ../sass/style.scss */
+#mainNavigation div ul li:first-child {
+  border-width: 0px 1px 0 1px;
 }
-/* line 199, ../sass/style.scss */
-#mainNavigation .nav ul li:last-child {
+/* line 191, ../sass/style.scss */
+#mainNavigation div ul li:last-child {
   border-width: 0 0 0 1px;
 }
-/* line 206, ../sass/style.scss */
-#mainNavigation .nav h2 {
+/* line 195, ../sass/style.scss */
+#mainNavigation div ul li:hover, #mainNavigation div ul li:focus {
+  background: rgba(0, 0, 0, 0.05) url(../images/navArrow.png) no-repeat 10% 80%;
+}
+/* line 202, ../sass/style.scss */
+#mainNavigation div h2 {
   font-family: 'FreightSansProBook';
   font-size: 1.3125em;
   color: #FFFFFF;
@@ -216,8 +213,8 @@ body {
   margin-left: 10%;
   margin-right: 10%;
 }
-/* line 215, ../sass/style.scss */
-#mainNavigation .nav aside {
+/* line 211, ../sass/style.scss */
+#mainNavigation div aside {
   font-family: 'FreightSansProLight';
   font-size: .875em;
   line-height: 1.1875em;
@@ -229,7 +226,7 @@ body {
 }
 
 /* HERO ------------------------------------------------------------------------------------- */
-/* line 234, ../sass/style.scss */
+/* line 230, ../sass/style.scss */
 #hero {
   width: 100%;
   top: 40px;
@@ -244,19 +241,19 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 251, ../sass/style.scss */
+/* line 247, ../sass/style.scss */
 #hero .caption {
   position: relative;
   top: 350px;
 }
-/* line 257, ../sass/style.scss */
+/* line 253, ../sass/style.scss */
 #hero .caption h1 {
   font-family: 'FreightSansProSemibold';
   font-size: 5em;
   color: #ffffff;
   margin-bottom: .5em;
 }
-/* line 266, ../sass/style.scss */
+/* line 262, ../sass/style.scss */
 #hero .caption h2 {
   font-family: 'FreightSansProLight';
   font-size: 1.3125em;
@@ -264,16 +261,23 @@ body {
 }
 
 /* GRID ----------------------------------------------------------------------------------- */
-/* line 277, ../sass/style.scss */
+/* line 273, ../sass/style.scss */
+#wrapper {
+  width: 100%;
+  background-color: #fff;
+}
+
+/* line 279, ../sass/style.scss */
 #content {
   position: relative;
   margin: 0px auto;
-  margin-top: -90px;
   background: rgba(255, 255, 255, 0.4);
   overflow: auto;
+  height: 3000px;
+  background-color: white;
 }
 
-/* line 285, ../sass/style.scss */
+/* line 289, ../sass/style.scss */
 .column {
   float: left;
   -moz-transition: all 0.25s ease;
@@ -282,7 +286,7 @@ body {
   -webkit-transition: all 0.25s ease;
 }
 
-/* line 290, ../sass/style.scss */
+/* line 294, ../sass/style.scss */
 .full {
   width: 100%;
   max-width: 960px;
@@ -360,29 +364,29 @@ body {
   margin-left: 2.08333%;
 }
 
-/* line 305, ../sass/style.scss */
+/* line 309, ../sass/style.scss */
 .first {
   margin-left: 1.04167%;
 }
 
-/* line 309, ../sass/style.scss */
+/* line 313, ../sass/style.scss */
 .last {
   margin-right: 1.04167%;
 }
 
-/* line 313, ../sass/style.scss */
+/* line 317, ../sass/style.scss */
 #sidebar {
   outline-left: 1px solid rgba(26, 33, 39, 0.1);
 }
 
 /* TYPOGRAPHY ----------------------------------------------------------------------------- */
-/* line 320, ../sass/style.scss */
+/* line 324, ../sass/style.scss */
 .leading {
   font-size: 1.3em;
   line-height: 1.4;
 }
 
-/* line 323, ../sass/style.scss */
+/* line 327, ../sass/style.scss */
 .left {
   min-width: 25%;
   max-width: 40%;
@@ -390,26 +394,26 @@ body {
   padding-right: 25px;
 }
 
-/* line 325, ../sass/style.scss */
+/* line 329, ../sass/style.scss */
 .pullQuote p {
   font: 1.3em 'JosefinSlabLightItalic',serif;
   line-height: 1.4;
   text-align: center;
 }
 
-/* line 338, ../sass/style.scss */
+/* line 342, ../sass/style.scss */
 .forceHeightMin {
   min-height: 1px;
 }
 
-/* line 339, ../sass/style.scss */
+/* line 343, ../sass/style.scss */
 .forceHeightFull {
   min-height: 100%;
 }
 
 /* MEDIA QUERIES --------------------------------------------------------------------------- */
 @media screen and (max-width: 800px) {
-  /* line 344, ../sass/style.scss */
+  /* line 348, ../sass/style.scss */
   #mainNavigation {
     position: relative;
     margin: 0;
@@ -420,13 +424,13 @@ body {
     background-color: #f06011;
     z-index: 1001;
   }
-  /* line 355, ../sass/style.scss */
-  #mainNavigation .nav {
+  /* line 362, ../sass/style.scss */
+  #mainNavigation div {
     margin: 0 auto;
     white-space: -4px;
   }
-  /* line 360, ../sass/style.scss */
-  #mainNavigation .nav ul li {
+  /* line 367, ../sass/style.scss */
+  #mainNavigation div ul li {
     float: none;
     width: auto;
     padding: 0 1em;
@@ -437,30 +441,30 @@ body {
     border-color: rgba(0, 0, 0, 0.1) rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 0.1);
     border-width: 1px 0 1px 1px;
   }
-  /* line 372, ../sass/style.scss */
-  #mainNavigation .nav ul li:hover {
+  /* line 379, ../sass/style.scss */
+  #mainNavigation div ul li:hover {
     background-color: #f06011;
   }
-  /* line 376, ../sass/style.scss */
-  #mainNavigation .nav ul li:first-child {
-    border-width: 1px 0 1px 1px;
+  /* line 383, ../sass/style.scss */
+  #mainNavigation div ul li:first-child {
+    border-width: 0px 0 1px 1px;
   }
-  /* line 379, ../sass/style.scss */
-  #mainNavigation .nav ul li:last-child {
+  /* line 386, ../sass/style.scss */
+  #mainNavigation div ul li:last-child {
     border-width: 1px 0px 1px 1px;
   }
-  /* line 387, ../sass/style.scss */
-  #mainNavigation .nav h2 {
+  /* line 394, ../sass/style.scss */
+  #mainNavigation div h2 {
     font-family: 'FreightSansProBook';
     font-size: 1em;
     margin: 0;
   }
-  /* line 393, ../sass/style.scss */
-  #mainNavigation .nav aside {
+  /* line 400, ../sass/style.scss */
+  #mainNavigation div aside {
     display: none;
   }
 
-  /* line 401, ../sass/style.scss */
+  /* line 408, ../sass/style.scss */
   #audienceNavigation {
     position: fixed;
     margin: 0;
@@ -471,27 +475,27 @@ body {
     background-color: #666361;
     z-index: 1000;
   }
-  /* line 412, ../sass/style.scss */
-  #audienceNavigation .nav {
+  /* line 419, ../sass/style.scss */
+  #audienceNavigation div {
     margin: 0 auto;
     overflow: auto;
   }
-  /* line 416, ../sass/style.scss */
-  #audienceNavigation .nav ul {
+  /* line 423, ../sass/style.scss */
+  #audienceNavigation div ul {
     margin-top: 10px;
     margin-left: 20px;
   }
-  /* line 423, ../sass/style.scss */
-  #audienceNavigation .nav li {
+  /* line 430, ../sass/style.scss */
+  #audienceNavigation div li {
     display: inline;
   }
-  /* line 426, ../sass/style.scss */
-  #audienceNavigation .nav li a {
+  /* line 433, ../sass/style.scss */
+  #audienceNavigation div li a {
     color: #FFFFFF;
     padding-right: 10%;
     font-family: 'FreightSansProBook';
     letter-spacing: .1em;
-    font-size: .75em;
+    font-size: .5em;
     margin: 0;
     text-decoration: none;
     -moz-transition: all 0.2s linear;
@@ -499,13 +503,13 @@ body {
     -o-transition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
   }
-  /* line 436, ../sass/style.scss */
-  #audienceNavigation .nav li a:hover, #audienceNavigation .nav li a:focus {
+  /* line 443, ../sass/style.scss */
+  #audienceNavigation div li a:hover, #audienceNavigation div li a:focus {
     color: #fff;
     background: rgba(0, 0, 0, 0.4);
   }
 
-  /* line 447, ../sass/style.scss */
+  /* line 454, ../sass/style.scss */
   #hero {
     width: 100%;
     top: 40px;
@@ -520,19 +524,19 @@ body {
     -o-background-size: cover;
     background-size: cover;
   }
-  /* line 464, ../sass/style.scss */
+  /* line 471, ../sass/style.scss */
   #hero .caption {
     position: relative;
     top: 350px;
   }
-  /* line 470, ../sass/style.scss */
+  /* line 477, ../sass/style.scss */
   #hero .caption h1 {
     font-family: 'FreightSansProSemibold';
     font-size: 5em;
     color: #ffffff;
     margin-bottom: .5em;
   }
-  /* line 479, ../sass/style.scss */
+  /* line 486, ../sass/style.scss */
   #hero .caption h2 {
     font-family: 'FreightSansProLight';
     font-size: 1.3125em;
