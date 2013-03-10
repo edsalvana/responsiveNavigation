@@ -94,7 +94,7 @@ a {
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: black;
   line-height: 1.125em;
 }
 
@@ -114,13 +114,13 @@ body {
 }
 /* line 109, ../sass/style.scss */
 #audienceNavigation div ul {
-  margin-left: 160px;
+  margin-left: 140px;
 }
 /* line 115, ../sass/style.scss */
 #audienceNavigation div li {
   padding-top: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: inline-block;
   height: 30px;
 }
@@ -147,7 +147,6 @@ body {
   margin-top: 570px;
   width: 100%;
   height: 180px;
-  box-shadow: 0px -12px 64px black;
   background-color: #f06011;
   z-index: 1001;
 }
@@ -241,43 +240,130 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 247, ../sass/style.scss */
+/* line 248, ../sass/style.scss */
 #hero .caption {
   position: relative;
   top: 350px;
 }
-/* line 253, ../sass/style.scss */
+/* line 254, ../sass/style.scss */
 #hero .caption h1 {
   font-family: 'FreightSansProSemibold';
   font-size: 5em;
   color: #ffffff;
   margin-bottom: .5em;
 }
-/* line 262, ../sass/style.scss */
+/* line 263, ../sass/style.scss */
 #hero .caption h2 {
   font-family: 'FreightSansProLight';
   font-size: 1.3125em;
   color: #ffffff;
 }
 
-/* GRID ----------------------------------------------------------------------------------- */
-/* line 273, ../sass/style.scss */
-#wrapper {
-  width: 100%;
+/* line 271, ../sass/style.scss */
+#today {
   background-color: #fff;
+  height: 604px;
 }
 
-/* line 279, ../sass/style.scss */
+/* GRID ----------------------------------------------------------------------------------- */
+/* line 281, ../sass/style.scss */
+#wrapper {
+  width: 100%;
+  background-color: #e6e6e6;
+}
+
+/* line 287, ../sass/style.scss */
 #content {
   position: relative;
   margin: 0px auto;
-  background: rgba(255, 255, 255, 0.4);
   overflow: auto;
   height: 3000px;
-  background-color: white;
+  z-index: 1002;
+  margin-top: -20px;
 }
 
-/* line 289, ../sass/style.scss */
+/* line 299, ../sass/style.scss */
+.topBlock {
+  margin-top: 80px;
+}
+
+/* line 303, ../sass/style.scss */
+.quote {
+  clear: left;
+  font-family: 'FreightSansProLight';
+  font-size: 1.875em;
+  line-height: 1.2em;
+  height: 240px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+/* line 313, ../sass/style.scss */
+.quote img {
+  float: left;
+}
+/* line 314, ../sass/style.scss */
+.quote h1 {
+  padding-top: 50px;
+}
+
+/* line 319, ../sass/style.scss */
+.block {
+  float: left;
+  margin-bottom: 40px;
+}
+/* line 325, ../sass/style.scss */
+.block h1 {
+  font-family: 'FreightSansProBook';
+  font-size: 0.8125em;
+  letter-spacing: .15em;
+  display: inline-block;
+  color: #fff;
+  background-color: #5e924d;
+  padding: 0px 10px 2px 10px;
+  text-transform: uppercase;
+}
+/* line 340, ../sass/style.scss */
+.block p {
+  font-family: 'FreightSansProBook';
+  font-size: 1em;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 20px;
+}
+
+/* line 352, ../sass/style.scss */
+.primary h2 {
+  font-family: 'FreightSansProSemibold';
+  font-size: 1.875em;
+  margin-left: 5%;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  line-height: 1em;
+}
+/* line 360, ../sass/style.scss */
+.primary h2 span {
+  font-family: 'FreightSansProLight';
+  font-size: 1em;
+  color: #666666;
+}
+
+/* line 374, ../sass/style.scss */
+.tertiary h2 {
+  font-family: 'FreightSansProSemibold';
+  font-size: .875em;
+  margin-left: 5%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1em;
+}
+/* line 382, ../sass/style.scss */
+.tertiary h2 span {
+  font-family: 'FreightSansProLight';
+  font-size: 1em;
+  color: #666666;
+}
+
+/* line 391, ../sass/style.scss */
 .column {
   float: left;
   -moz-transition: all 0.25s ease;
@@ -286,10 +372,15 @@ body {
   -webkit-transition: all 0.25s ease;
 }
 
-/* line 294, ../sass/style.scss */
+/* line 396, ../sass/style.scss */
 .full {
   width: 100%;
   max-width: 960px;
+}
+
+/* line 402, ../sass/style.scss */
+.flexImage {
+  width: 100%;
 }
 
 /* line 28, ../sass/style.scss */
@@ -364,186 +455,185 @@ body {
   margin-left: 2.08333%;
 }
 
-/* line 309, ../sass/style.scss */
+/* line 415, ../sass/style.scss */
 .first {
   margin-left: 1.04167%;
 }
 
-/* line 313, ../sass/style.scss */
+/* line 419, ../sass/style.scss */
 .last {
   margin-right: 1.04167%;
 }
 
-/* line 317, ../sass/style.scss */
+/* line 423, ../sass/style.scss */
 #sidebar {
   outline-left: 1px solid rgba(26, 33, 39, 0.1);
 }
 
 /* TYPOGRAPHY ----------------------------------------------------------------------------- */
-/* line 324, ../sass/style.scss */
-.leading {
-  font-size: 1.3em;
-  line-height: 1.4;
-}
-
-/* line 327, ../sass/style.scss */
-.left {
-  min-width: 25%;
-  max-width: 40%;
-  margin-left: -20%;
-  padding-right: 25px;
-}
-
-/* line 329, ../sass/style.scss */
-.pullQuote p {
-  font: 1.3em 'JosefinSlabLightItalic',serif;
-  line-height: 1.4;
-  text-align: center;
-}
-
-/* line 342, ../sass/style.scss */
+/* line 433, ../sass/style.scss */
 .forceHeightMin {
   min-height: 1px;
 }
 
-/* line 343, ../sass/style.scss */
+/* line 434, ../sass/style.scss */
 .forceHeightFull {
   min-height: 100%;
 }
 
 /* MEDIA QUERIES --------------------------------------------------------------------------- */
-@media screen and (max-width: 800px) {
-  /* line 348, ../sass/style.scss */
-  #mainNavigation {
-    position: relative;
-    margin: 0;
-    top: 220px;
-    width: 100%;
-    height: 180px;
-    box-shadow: 0px -12px 64px black;
-    background-color: #f06011;
-    z-index: 1001;
-  }
-  /* line 362, ../sass/style.scss */
-  #mainNavigation div {
-    margin: 0 auto;
-    white-space: -4px;
-  }
-  /* line 367, ../sass/style.scss */
-  #mainNavigation div ul li {
-    float: none;
-    width: auto;
-    padding: 0 1em;
-    line-height: 2.8em;
-    height: auto;
-    cursor: pointer;
-    background: url(../images/navArrow.png) no-repeat 98% 50%;
-    border-color: rgba(0, 0, 0, 0.1) rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 0.1);
-    border-width: 1px 0 1px 1px;
-  }
-  /* line 379, ../sass/style.scss */
-  #mainNavigation div ul li:hover {
-    background-color: #f06011;
-  }
-  /* line 383, ../sass/style.scss */
-  #mainNavigation div ul li:first-child {
-    border-width: 0px 0 1px 1px;
-  }
-  /* line 386, ../sass/style.scss */
-  #mainNavigation div ul li:last-child {
-    border-width: 1px 0px 1px 1px;
-  }
-  /* line 394, ../sass/style.scss */
-  #mainNavigation div h2 {
-    font-family: 'FreightSansProBook';
-    font-size: 1em;
-    margin: 0;
-  }
-  /* line 400, ../sass/style.scss */
-  #mainNavigation div aside {
-    display: none;
-  }
-
-  /* line 408, ../sass/style.scss */
-  #audienceNavigation {
-    position: fixed;
-    margin: 0;
-    top: 0px;
-    width: 100%;
-    height: 40px;
-    box-shadow: 0px -2px 8px #888888;
-    background-color: #666361;
-    z-index: 1000;
-  }
-  /* line 419, ../sass/style.scss */
-  #audienceNavigation div {
-    margin: 0 auto;
-    overflow: auto;
-  }
-  /* line 423, ../sass/style.scss */
-  #audienceNavigation div ul {
-    margin-top: 10px;
-    margin-left: 20px;
-  }
-  /* line 430, ../sass/style.scss */
-  #audienceNavigation div li {
-    display: inline;
-  }
-  /* line 433, ../sass/style.scss */
-  #audienceNavigation div li a {
-    color: #FFFFFF;
-    padding-right: 10%;
-    font-family: 'FreightSansProBook';
-    letter-spacing: .1em;
-    font-size: .5em;
-    margin: 0;
-    text-decoration: none;
-    -moz-transition: all 0.2s linear;
-    -webkit-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-    -webkit-transition: all 0.2s linear;
-  }
-  /* line 443, ../sass/style.scss */
-  #audienceNavigation div li a:hover, #audienceNavigation div li a:focus {
-    color: #fff;
-    background: rgba(0, 0, 0, 0.4);
-  }
-
-  /* line 454, ../sass/style.scss */
-  #hero {
-    width: 100%;
-    top: 40px;
-    overflow: hidden;
-    text-align: center;
-    position: fixed;
-    z-index: -100;
-    height: 180px;
-    background: url(../images/diver.png) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  /* line 471, ../sass/style.scss */
-  #hero .caption {
-    position: relative;
-    top: 350px;
-  }
-  /* line 477, ../sass/style.scss */
-  #hero .caption h1 {
-    font-family: 'FreightSansProSemibold';
-    font-size: 5em;
-    color: #ffffff;
-    margin-bottom: .5em;
-  }
-  /* line 486, ../sass/style.scss */
-  #hero .caption h2 {
-    font-family: 'FreightSansProLight';
-    font-size: 1.3125em;
-    color: #ffffff;
-  }
-}
 /*
+@media screen and (max-width: 800px) {
+      #mainNavigation{
+            position:               relative;
+            margin:                 0;
+            top:                    220px;
+            width:                  100%;
+            height:                 180px;
+            box-shadow:             0px -12px   64px #000;
+            background-color:       rgba(240,96,17,1);
+            z-index:1001;
+
+
+
+
+            //clean up this nav, it's duplicated in the audience nav
+            div{
+                  margin:                 0 auto;
+                  white-space:-4px;
+
+                  ul {  
+                        li {  
+                             float:none;
+                             width:auto;
+                             padding:0 1em;
+                             line-height: 2.8em;
+                             height: auto;
+                             cursor:pointer;
+                             background:url(../images/navArrow.png) no-repeat 98% 50%;
+                             
+                              border-color: rgba(0,0,0,0.1) rgba(255,255,255,0.2) rgba(255,255,255,0.2) rgba(0,0,0,0.1);
+                              border-width: 1px 0 1px 1px;
+
+                             &:hover {
+                                    background-color:       rgba(240,96,17,1);
+                             }
+
+                              &:first-child {
+                                    border-width:0px 0 1px 1px;
+                              }
+                              &:last-child {
+                                    border-width:1px 0px 1px 1px;
+                              }
+
+                        }
+
+                  }
+
+                  h2{   
+                        font-family: 'FreightSansProBook';
+                        font-size:              1em;
+                        margin:0;
+                  }
+
+                  aside {
+                        display:none;
+                  }
+
+            }
+      }
+
+
+      #audienceNavigation{
+            position:               fixed;
+            margin:                 0;
+            top:                    0px;
+            width:                  100%;
+            height:                 40px;
+            box-shadow:             0px -2px 8px #888;
+            background-color:       rgba(102,99,97,1);
+            z-index:1000;
+
+            //clean up this nav, it's duplicated in the main nav
+            div {
+                  margin:           0 auto;
+                  overflow:         auto; // key for div not collapsing 
+         
+                  ul {
+                        margin-top:       10px;
+                        margin-left:      20px;
+                        //margin-left:      2.08333333333%; // (  20 / 960 ) * 100 
+                        // float:            left;
+                  }
+
+                  li {  
+                        display:          inline;  
+
+                        a {
+                              color:                  #FFFFFF;
+                              padding-right:           10%;  
+                              font-family:            'FreightSansProBook';
+                              letter-spacing:         .1em;
+                              font-size:              .5em;
+                              margin:                 0;
+                              text-decoration:        none;
+                              @include transitionTo(  all, 0.2s, linear);
+
+                              &:hover, &:focus{
+                                    color:            #fff;
+                                    background:       rgba(0,0,0,.4);
+                              }
+                        }
+                  }
+
+            }
+      }
+
+
+#hero {
+      width:                  100%;
+      top:                    40px;
+      overflow:               hidden;
+      text-align:             center;
+
+      position:               fixed;
+      z-index:                -100;
+      height:                 180px;
+      //margin:auto;
+
+      background: url(../images/diver.png) no-repeat center center ; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+
+      .caption {
+
+            position:relative;
+            top:350px;
+             
+
+            h1 {
+                  font-family: 'FreightSansProSemibold';
+                  font-size:   5em;
+                  color: #ffffff;
+                  margin-bottom:.5em; 
+                  //letter-spacing:.1em;
+                  
+            }
+
+            h2 {
+                  font-family: 'FreightSansProLight';
+                  font-size:   1.3125em;
+                  color: #ffffff; 
+            }
+      }
+}
+
+
+}
+
+
 @media screen and (max-width: 650px) {
       
       #nav{ 
