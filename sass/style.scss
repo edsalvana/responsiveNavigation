@@ -347,13 +347,15 @@ body {
 }
 
 .block {
+
       float:left; 
       margin-bottom: 40px;
-      //padding-bottom:20px;
-
 
       & > div{
+            background-color:white;
+            overflow:none;
             box-shadow: 0px 0px 12px 12px rgba(0,0,0,.05);
+            padding: 20px;
       }
 
       h1 {
@@ -363,81 +365,69 @@ body {
             display:inline-block;
             color:#fff;
             background-color:#5e924d;
-            padding: 0px 10px 2px 10px;
+            padding: 0 10px 0 10px;
             text-transform: uppercase;
       }
 
       p {
             font-family: 'FreightSansProBook';
+
             font-size:   1em;
-            margin-left: 5%;
-            margin-right:5%;
-            //background-color:red;
-            padding-bottom:20px;
+            margin-top:.5em;
       }
 
 }
 
 
 .primary {
+      
       h2 {
             font-family: 'FreightSansProSemibold';
             font-size:   1.875em;
-            margin-left:5%;
-            margin-top:20px;
-            margin-bottom:5px; //this should be line-height
             line-height:1em;
-            
-            span {
-                  font-family: 'FreightSansProLight';
-                  font-size:   1em; //text is also relative to its container
-                  color: #666666;
-                  
-            }
       }
+
+      span {
+            font-family: 'FreightSansProLight';
+            font-size:   1em; //text is also relative to its container
+            color: #666666;
+                  
+      }
+      
 }
 
 .secondary {
-  h2 {
+    
+      h2 {
             font-family: 'FreightSansProSemibold';
             font-size:   1.3125em;
-            margin-left:5%;
-            margin-top:20px;
             line-height:1.1em;
             
-            span {
-                  font-family: 'FreightSansProLight';
-                  font-size:   1em; //text is also relative to its container
-                  color: #666666;
-                  
-            }
+      }
+      
+      span {
+            font-family: 'FreightSansProLight';
+            font-size:   1em; //text is also relative to its container
+            color: #666666;
+            
       }
 
-      p {
-             margin-bottom:20px;
-      }
 }
 
 .tertiary {
       h2 {
             font-family: 'FreightSansProSemibold';
             font-size:   .875em;
-            margin-left:5%;
-            margin-top:20px;
-            margin-bottom:20px;
             line-height:1em;
-            
-            span {
-                  font-family: 'FreightSansProLight';
-                  font-size:   1em; //text is also relative to its container
-                  color: #666666;
-                  
-            }
+      }      
 
-            p {
-                  margin-bottom:20px;
-            }
+      span {
+            font-family: 'FreightSansProLight';
+            font-size:   1em; //text is also relative to its container
+            color: #666666;
+            
       }
+      
 }
 
 .column {
